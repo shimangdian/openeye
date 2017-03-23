@@ -1,0 +1,36 @@
+/* pages/videodetail/videodetail.wxss */
+#myVideo{
+    width: 100%;
+}
+.content .videoheader{
+    border-bottom: 1px solid black;
+    padding: 40rpx;    
+    
+}
+.content .videoheader .title{
+    text-overflow : ellipsis; 
+    white-space : nowrap; 
+    overflow : hidden;
+    font-size: 14px; 
+}
+.content .videoheader .category{
+    margin-top: 25rpx;
+    font-size: 12px;
+}
+.description{
+    padding: 40rpx;
+    font-size: 12px;
+    line-height: 24px;
+}
+.content{
+    position: relative;
+    color: #fff;
+}
+.content .context{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.blur{
+    filter: blur(20px);
+}

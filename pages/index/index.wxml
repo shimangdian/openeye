@@ -2,23 +2,21 @@
 <view class="container">
   <block wx:for="{{videoList}}" wx:key="{{index}}">
     
-    <view class="section"  wx:if="{{item.type=='banner2'}}">
+    <view class="section"  wx:if="{{item.type=='banner2'}}" >
       <image src="{{item.data.image}}"></image>
     </view>
-    <view class="section"  wx:if="{{item.type=='video'}}">
-      <navigator url="{{item.data.playUrl}}" wx:open-type="redirect">
+    <view class="section"  wx:if="{{item.type=='video'}}" bindtap="goWatch" data-data="{{item}}">
         <image src="{{item.data.cover.feed}}"></image>
         <view class="bg"></view>
         <view class="supernatant">
           <text class="title">{{item.data.title}}</text>
           <text class="tag">#{{item.data.category}} / 03'59"</text>
         </view>
-      </navigator>
     </view>
     <view class="section oldsec" wx:if="{{item.type=='textFooter'}}">
       <text class="old">{{item.data.text}}></text>
     </view>
-    <view class="section" wx:if="{{item.type=='videoCollectionWithCover'}}">
+    <view class="section swipersec" wx:if="{{item.type=='videoCollectionWithCover'}}">
       <view class="typeheader">
         <image src="{{item.data.header.cover}}"></image>
         <view class="sanjiao"></view>
@@ -40,6 +38,9 @@
       </scroll-view>
       </view>
      
+    </view>
+    <view class="section" wx:if="{{item.type=='textHeader'}}">
+      <text class="old" style="font-family:'{{item.data.font}}'">{{item.data.text}}</text>
     </view>
   </block>
 </view>

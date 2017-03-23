@@ -1,0 +1,15 @@
+<!--pages/videodetail/videodetail.wxml-->
+<view class="container">
+   <video id="myVideo" src="{{video.playUrl}}"></video>
+   <view class="content">
+    <image src="{{video.cover.feed}}" class="blur"></image>
+    <view class="context">
+        <view class="videoheader">
+            <view class="title">{{video.title}}</view>
+            <view class="category">#{{video.category}} / 06'13"</view>
+        </view>
+        <view class="description">{{video.description}}
+            </view> 
+    </view>
+   </view>
+</view>

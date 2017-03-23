@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/find/find",
     "pages/follow/follow",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/videodetail/videodetail"
   ],
   "window":{
     "backgroundTextStyle":"light",

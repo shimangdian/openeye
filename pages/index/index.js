@@ -4,12 +4,14 @@ var app = getApp()
 Page({
   data: {
     motto: 'Hello World',
-    videoList:[]
+    videoList:[],
   },
   //事件处理函数
-  bindViewTap: function() {
+  goWatch: function(e) {
+    var video=e.currentTarget.dataset.data.data;
+    app.globalData.video=video;
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../videodetail/videodetail'
     })
   },
   onLoad: function () {
@@ -21,11 +23,8 @@ Page({
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
       success: function(res){
-        var list = res.data.itemList;
-        list.shift();
-        console.log(list);
         that.setData({
-          videoList: list
+          videoList: res.data.itemList
         })
       },
       fail: function() {
