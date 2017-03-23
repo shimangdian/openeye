@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/find/find",
+    "pages/follow/follow",
+    "pages/my/my"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "OpenEye",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "精选"
+    }, {
+      "pagePath": "pages/find/find",
+      "text": "发现"
+    }, {
+      "pagePath": "pages/follow/follow",
+      "text": "关注"
+    }, {
+      "pagePath": "pages/my/my",
+      "text": "我的"
+    }
+    ]
+  }
+}
