@@ -1,9 +1,9 @@
 //index.js
 //获取应用实例
 var app = getApp()
+
 Page({
   data: {
-    motto: 'Hello World',
     videoList:[],
   },
   //事件处理函数
@@ -23,15 +23,27 @@ Page({
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
       success: function(res){
+        var list = res.data.itemList;
+        var len = list.length;
+        for(var i = 0; i < len; i++){
+          if(list[i].type==="video"){
+          var time = list[i].data.duration;
+          time = parseInt(time/60)+"'"+time%60+'"';
+          list[i].data.duration = time;
+          }
+        }
+        var videolist = res.data.itemList;
         that.setData({
-          videoList: res.data.itemList
+          videoList:videolist
         })
+       
       },
       fail: function() {
         // fail
       },
       complete: function() {
         // complete
+       
       }
     })
   }

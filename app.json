@@ -1,7 +1,8 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/find/find",
+    "pages/index/index",
+    
     "pages/follow/follow",
     "pages/my/my",
     "pages/videodetail/videodetail"
@@ -15,16 +16,24 @@
   "tabBar": {
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "精选"
+      "text": "精选",
+      "iconPath":"icon/five.png",
+      "selectedIconPath":"icon/fillfive.png"
     }, {
       "pagePath": "pages/find/find",
-      "text": "发现"
+      "text": "发现",
+      "iconPath":"icon/circle.png",
+      "selectedIconPath":"icon/fillcircle.png"
     }, {
       "pagePath": "pages/follow/follow",
-      "text": "关注"
+      "text": "关注",
+      "iconPath":"icon/cha.png",
+      "selectedIconPath":"icon/yuancha.png"
     }, {
       "pagePath": "pages/my/my",
-      "text": "我的"
+      "text": "我的",
+      "iconPath":"icon/square.png",
+      "selectedIconPath":"icon/fillsquare.png"
     }
     ]
   }

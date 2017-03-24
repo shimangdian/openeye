@@ -10,7 +10,7 @@
         <view class="bg"></view>
         <view class="supernatant">
           <text class="title">{{item.data.title}}</text>
-          <text class="tag">#{{item.data.category}} / 03'59"</text>
+          <text class="tag">#{{item.data.category}} / {{item.data.duration}}</text>
         </view>
     </view>
     <view class="section oldsec" wx:if="{{item.type=='textFooter'}}">
@@ -31,7 +31,7 @@
           </navigator>
           <view class="videotext">
             <view class="videotitle">{{videoitem.data.title}}</view>
-            <view class="videotag">#{{videoitem.data.category}} / 03'59"</view>
+            <view class="videotag">#{{videoitem.data.category}} / {{videoitem.data.duration}}</view>
           </view>
         </view>
         </block>
